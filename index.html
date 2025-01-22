@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Marisail Cruises</title>
+        <title>Cruisora Cruise</title>
         <meta name="theme-color" content="#fff">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +23,8 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-        <base href="/marisail/">
         <link rel="stylesheet" href="styles/main.min.css">
-
+        <base href="/">
     </head>
     <body>
         <header class="header">
@@ -33,9 +32,7 @@
         <div class="header__inner">
             <div class="logo">
                 <a class="logo__link" href="#">
-                    <svg class="icon icon--logo">
-                        <use xlink:href="img/sprites/sprite.svg#logo"></use>
-                    </svg>
+                    <img class="logo__img" src="img/logo.webp" alt="Cruisora">
                 </a>
             </div>
             <div class="header__menu menu">
@@ -60,16 +57,17 @@
                             <a href="#" class="menu__list-link">Web Check-in</a>
                         </li>
                     </ul>
-                    <button class="header__button header__button--mobile">Weekend Gateway</button>
+                    <button class="header__button header__button--mobile" aria-label="open form to book a weekend trip">Weekend Getaway</button>
                 </nav>
             </div>
-            <button class="header__button">Weekend Gateway</button>
+            <button class="header__button" aria-label="open form to book a weekend trip">Weekend Getaway</button>
         </div>
     </div>
 </header>
 
-<div class="header__indent"></div>
-        <section class="promo" style="background-image: url('img/promo-bg.jpg');">
+        <section class="promo">
+    
+    <img class="promo__background" src="img/promo-bg.png" alt="Big Cruise Lainer" loading="lazy">
 
     <aside class="aside__follow">
         <div class="aside__follow-text">Follow us</div>
@@ -154,17 +152,17 @@
                 <div class="service__inner-descr">Embrace life's vastness, venture forth,</div> 
             </div>
             <div class="service__inner-item">
-                <img class="service__inner-img service__inner-img--first" src="img/service/1.png" alt="Earh">
+                <img class="service__inner-img service__inner-img--first" src="img/service/1.png" alt="Earh" loading="lazy">
                 <span class="service__inner-info">Lot of choices</span>
                 <small class="service__inner-descr">Embrace life's vastness, venture forth,</small>
             </div>
             <div class="service__inner-item">
-                <img class="service__inner-img service__inner-img--second" src="img/service/2.png" alt="paper plain">
+                <img class="service__inner-img service__inner-img--second" src="img/service/2.png" alt="paper plain" loading="lazy">
                 <span class="service__inner-info">Best Tour Guide</span>
                 <small class="service__inner-descr">Embrace life's vastness, venture forth,</small>
             </div>
             <div class="service__inner-item">
-                <img class="service__inner-img service__inner-img--third" src="img/service/3.png" alt="banks card">
+                <img class="service__inner-img service__inner-img--third" src="img/service/3.png" alt="banks card" loading="lazy">
                 <span class="service__inner-info">Easy Booking</span>
                 <small class="service__inner-descr">Embrace life's vastness, venture forth,</small>
             </div>
@@ -195,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="chatbot__head-btn" type="button">Close</button>
+                <button class="chatbot__head-btn" type="button" aria-label="close window with chatbot">Close</button>
             </div>
             <div class="chatbot__body">
                 <div class="chatbot__body-wrapper">
@@ -231,17 +229,19 @@
                 </div>
             </div>
             <div class="chatbot__footer">
-                <input class="chatbot__footer-input" type="text" placeholder="Ask your question...">
-                <button class="chatbot__footer-btn" type="button">
-                    <svg class="icon icon--chatbot-plane">
-                        <use xlink:href="img/sprites/sprite.svg#chatbot-plane"></use>
-                    </svg>
-                </button>
+                <form action="#">
+                    <input class="chatbot__footer-input" name="message" required type="text" placeholder="Ask your question...">
+                    <button class="chatbot__footer-btn" type="submit" aria-label="send message to chatbot">
+                        <svg class="icon icon--chatbot-plane">
+                            <use xlink:href="img/sprites/sprite.svg#chatbot-plane"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
     
-    <button class="chatbot-btn" type="button">
+    <button class="chatbot-btn" type="button" aria-label="open chatbot">
         <img class="chatbot-img" src="img/chatbot.gif" alt="bot">
     </button>
 </div>
@@ -253,42 +253,42 @@
         </div>
         <div class="destination__nav">
             <div class="destination__nav-box destination__nav-box--tabs">
-                <button class="destination__nav-tab destination__nav-tab--active">India</button>
-                <button class="destination__nav-tab">Dubai</button>
-                <button class="destination__nav-tab">Sri Lanka</button>
+                <button class="destination__nav-tab destination__nav-tab--active" aria-label="open tab">India</button>
+                <button class="destination__nav-tab" aria-label="open tab">Dubai</button>
+                <button class="destination__nav-tab" aria-label="open tab">Sri Lanka</button>
             </div>
             <div class="destination__nav-box destination__nav-box--arrow">
                 <div class="destination__nav-slider destination__nav-slider--current destination__nav-slider--slider-1">
-                    <button class="destination__nav-btn destination__nav-btn--prev">
+                    <button class="destination__nav-btn destination__nav-btn--prev" aria-label="previous slide">
                         <svg class="icon icon--arrow-slider">
                             <use xlink:href="img/sprites/sprite.svg#arrow-slider__prev"></use>
                         </svg>
                     </button>
-                    <button class="destination__nav-btn destination__nav-btn--next">
+                    <button class="destination__nav-btn destination__nav-btn--next" aria-label="next slide">
                         <svg class="icon icon--arrow-slider icon--arrow-next">
                             <use xlink:href="img/sprites/sprite.svg#arrow-slider__next"></use>
                         </svg>
                     </button>
                 </div>
                 <div class="destination__nav-slider destination__nav-slider--slider-2">
-                    <button class="destination__nav-btn destination__nav-btn--prev">
+                    <button class="destination__nav-btn destination__nav-btn--prev" aria-label="previous slide">
                         <svg class="icon icon--arrow-slider">
                             <use xlink:href="img/sprites/sprite.svg#arrow-slider__prev"></use>
                         </svg>
                     </button>
-                    <button class="destination__nav-btn destination__nav-btn--next">
+                    <button class="destination__nav-btn destination__nav-btn--next" aria-label="next slide">
                         <svg class="icon icon--arrow-slider icon--arrow-next">
                             <use xlink:href="img/sprites/sprite.svg#arrow-slider__next"></use>
                         </svg>
                     </button>
                 </div>
                 <div class="destination__nav-slider destination__nav-slider--slider-3">
-                    <button class="destination__nav-btn destination__nav-btn--prev">
+                    <button class="destination__nav-btn destination__nav-btn--prev" aria-label="previous slide">
                         <svg class="icon icon--arrow-slider">
                             <use xlink:href="img/sprites/sprite.svg#arrow-slider__prev"></use>
                         </svg>
                     </button>
-                    <button class="destination__nav-btn destination__nav-btn--next">
+                    <button class="destination__nav-btn destination__nav-btn--next" aria-label="next slide">
                         <svg class="icon icon--arrow-slider icon--arrow-next">
                             <use xlink:href="img/sprites/sprite.svg#arrow-slider__next"></use>
                         </svg>
@@ -303,7 +303,7 @@
                 <div class="destination__content-items destination__content-items--slider-1">
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/1.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/1.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -322,7 +322,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -342,7 +342,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -360,8 +360,8 @@
                         </div>
                     </div>
                     <div class="destination__content-item">
-                        <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building">
+                        <div class="destination__content-picture"> 
+                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -387,7 +387,7 @@
                 <div class="destination__content-items destination__content-items--slider-2">
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/1.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/1.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -406,7 +406,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -425,7 +425,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -444,7 +444,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -470,7 +470,7 @@
                 <div class="destination__content-items destination__content-items--slider-3">
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/1.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/1.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -489,7 +489,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/2.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -508,7 +508,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -527,7 +527,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -546,7 +546,7 @@
                     </div>
                     <div class="destination__content-item">
                         <div class="destination__content-picture">
-                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building">
+                            <img class="destination__content-img" src="img/destination/3.jpg" alt="building" loading="lazy">
                             <div class="destination__content-rating">
                                 <svg class="icon icon--star">
                                     <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -580,7 +580,7 @@
                 <span class="upcoming__filter-info">Sort By: </span>
                 <ul class="upcoming__filter-list">
                     <li class="upcoming__filter-item">
-                        <button class="upcoming__filter-btn upcoming__filter-btn--date">
+                        <button class="upcoming__filter-btn upcoming__filter-btn--date" aria-label="sort by date">
                             <div class="upcoming__filter-box">
                                 <svg class="icon icon--calender-upcoming">
                                     <use xlink:href="img/sprites/sprite.svg#calender--upcoming"></use>
@@ -591,7 +591,7 @@
                         </button>
                     </li>
                     <li class="upcoming__filter-item">
-                        <button class="upcoming__filter-btn upcoming__filter-btn--price-low">
+                        <button class="upcoming__filter-btn upcoming__filter-btn--price-low" aria-label="sort by price low to high">
                             <svg class="icon icon--price">
                                 <use xlink:href="img/sprites/sprite.svg#price-low"></use>
                             </svg>
@@ -599,7 +599,7 @@
                         </button>
                     </li>
                     <li class="upcoming__filter-item">
-                        <button class="upcoming__filter-btn upcoming__filter-btn--price-high">
+                        <button class="upcoming__filter-btn upcoming__filter-btn--price-high" aria-label="sort by price high to low">
                             <svg class="icon icon--price ">
                                 <use xlink:href="img/sprites/sprite.svg#price-high"></use>
                             </svg>
@@ -607,7 +607,7 @@
                         </button>
                     </li>
                     <li class="upcoming__filter-item">
-                        <button class="upcoming__filter-btn upcoming__filter-btn--name">
+                        <button class="upcoming__filter-btn upcoming__filter-btn--name" aria-label="sort by name">
                             <svg class="icon icon--pencil">
                                 <use xlink:href="img/sprites/sprite.svg#pencil"></use>
                             </svg>
@@ -620,7 +620,7 @@
             <ul class="upcoming__cards">
                 <li class="upcoming__card" data-price="130" data-date="2025-01-9" data-name="Aqua Voyager">
                     <div class="upcoming__card-picture">
-                        <img class="upcoming__card-img" src="img/upcoming/1.jpg" alt="lainer">
+                        <img class="upcoming__card-img" src="img/upcoming/1.jpg" alt="lainer" loading="lazy">
                         <div class="upcoming__card-rating">
                             <svg class="icon icon--star">
                                 <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -663,7 +663,7 @@
                 </li>
                 <li class="upcoming__card" data-price="120" data-date="2025-01-14" data-name="Tidal Adventure">
                     <div class="upcoming__card-picture">
-                        <img class="upcoming__card-img" src="img/upcoming/2.jpg" alt="lainer">
+                        <img class="upcoming__card-img" src="img/upcoming/2.jpg" alt="lainer" loading="lazy">
                         <div class="upcoming__card-rating">
                             <svg class="icon icon--star">
                                 <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -706,7 +706,7 @@
                 </li>
                 <li class="upcoming__card" data-price="150" data-date="2025-01-4" data-name="Marine Discovery">
                     <div class="upcoming__card-picture">
-                        <img class="upcoming__card-img" src="img/upcoming/4.jpg" alt="lainer">
+                        <img class="upcoming__card-img" src="img/upcoming/4.jpg" alt="lainer" loading="lazy">
                         <div class="upcoming__card-rating">
                             <svg class="icon icon--star">
                                 <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -749,7 +749,7 @@
                 </li>
                 <li class="upcoming__card" data-price="190" data-date="2025-01-21" data-name="Blue Horizon Cruise">
                     <div class="upcoming__card-picture">
-                        <img class="upcoming__card-img" src="img/upcoming/6.jpg" alt="lainer">
+                        <img class="upcoming__card-img" src="img/upcoming/6.jpg" alt="lainer" loading="lazy">
                         <div class="upcoming__card-rating">
                             <svg class="icon icon--star">
                                 <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -792,7 +792,7 @@
                 </li>
                 <li class="upcoming__card" data-price="160" data-date="2025-01-7" data-name="Sail Away Journey">
                     <div class="upcoming__card-picture">
-                        <img class="upcoming__card-img" src="img/upcoming/5.jpg" alt="lainer">
+                        <img class="upcoming__card-img" src="img/upcoming/5.jpg" alt="lainer" loading="lazy">
                         <div class="upcoming__card-rating">
                             <svg class="icon icon--star">
                                 <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -835,7 +835,7 @@
                 </li>
                 <li class="upcoming__card" data-price="140" data-date="2025-01-2" data-name="Seashell Getaway">
                     <div class="upcoming__card-picture">
-                        <img class="upcoming__card-img" src="img/upcoming/3.jpg" alt="lainer">
+                        <img class="upcoming__card-img" src="img/upcoming/3.jpg" alt="lainer" loading="lazy">
                         <div class="upcoming__card-rating">
                             <svg class="icon icon--star">
                                 <use xlink:href="img/sprites/sprite.svg#star"></use>
@@ -888,19 +888,19 @@
             <h2 class="protocols__inner-title">Safety Protocols</h2>
             <div class="protocols__inner-items">
                 <div class="protocols__inner-item">
-                    <img class="protocols__inner-img" src="img/protocols/1.png" alt="clear air">
+                    <img class="protocols__inner-img" src="img/protocols/1.png" alt="clear air" loading="lazy">
                     <span class="protocols__inner-text">
                         100% Fresh and Filtered Air
                     </span>
                 </div>
                 <div class="protocols__inner-item">
-                    <img class="protocols__inner-img" src="img/protocols/2.png" alt="antiseptic">
+                    <img class="protocols__inner-img" src="img/protocols/2.png" alt="antiseptic" loading="lazy">
                     <span class="protocols__inner-text">
                         Completely Sanitized
                     </span>
                 </div>
                 <div class="protocols__inner-item">
-                    <img class="protocols__inner-img" src="img/protocols/3.png" alt="gear with plus">
+                    <img class="protocols__inner-img" src="img/protocols/3.png" alt="gear with plus" loading="lazy">
                     <span class="protocols__inner-text">
                         Elevated Health Protocols
                     </span>
@@ -915,19 +915,19 @@
             <h2 class="gallery__inner-title title">Photo Gallery</h2>
             <div class="gallery__inner-items">
                 <div class="gallery__inner-item gallery__inner-item--wide">
-                    <img class="gallery__inner-img" src="img/gallery/1.jpg" alt="people dancing">
+                    <img class="gallery__inner-img" src="img/gallery/1.jpg" alt="people dancing" loading="lazy">
                 </div>
                 <div class="gallery__inner-item gallery__inner-item--standart">
-                    <img class="gallery__inner-img" src="img/gallery/2.jpg" alt="people dancing">
+                    <img class="gallery__inner-img" src="img/gallery/2.jpg" alt="people dancing" loading="lazy">
                 </div>
                 <div class="gallery__inner-item gallery__inner-item--tall">
-                    <img class="gallery__inner-img" src="img/gallery/3.jpg" alt="people dancing">
+                    <img class="gallery__inner-img" src="img/gallery/3.jpg" alt="people dancing" loading="lazy">
                 </div>
                 <div class="gallery__inner-item gallery__inner-item--standart">
-                    <img class="gallery__inner-img" src="img/gallery/4.jpg" alt="people dancing">
+                    <img class="gallery__inner-img" src="img/gallery/4.jpg" alt="people dancing" loading="lazy">
                 </div>
                 <div class="gallery__inner-item gallery__inner-item--wide">
-                    <img class="gallery__inner-img" src="img/gallery/5.jpg" alt="people dancing">
+                    <img class="gallery__inner-img" src="img/gallery/5.jpg" alt="people dancing" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1047,34 +1047,34 @@
                     <div class="reviews__body-panel">
                         <div class="reviews__body-observers" dir="rtl">
                             <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/1.jpg" alt="man">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/1.jpg" alt="man" loading="lazy">
                             </div>
                            <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/2.jpg" alt="girl">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/2.jpg" alt="girl" loading="lazy">
                             </div>
                             <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/3.jpg" alt="girl">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/3.jpg" alt="girl" loading="lazy">
                             </div>
                              <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/4.jpg" alt="man">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/4.jpg" alt="man" loading="lazy">
                             </div>
                             <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/5.jpg" alt="girl">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/5.jpg" alt="girl" loading="lazy">
                             </div>
                             <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/6.jpg" alt="girl">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/6.jpg" alt="girl" loading="lazy">
                             </div>
                             <div class="reviews__body-observer">
-                                <img class="reviews__body-avatar" src="img/reviews/observers/7.jpg" alt="girl">
+                                <img class="reviews__body-avatar" src="img/reviews/observers/7.jpg" alt="girl" loading="lazy">
                             </div>
                         </div>
                         <div class="reviews__body-buttons">
-                            <button class="reviews__body-btn reviews__body-btn--prev">
+                            <button class="reviews__body-btn reviews__body-btn--prev" aria-label="previous slide">
                                 <svg class="icon icon--arrow-slider">
                                     <use xlink:href="img/sprites/sprite.svg#arrow-slider__prev"></use>
                                 </svg>
                             </button>
-                            <button class="reviews__body-btn reviews__body-btn--next">
+                            <button class="reviews__body-btn reviews__body-btn--next" aria-label="next slide">
                                 <svg class="icon icon--arrow-slider icon--arrow-next">
                                     <use xlink:href="img/sprites/sprite.svg#arrow-slider__next"></use>
                                 </svg>
@@ -1086,8 +1086,8 @@
                     <div class="reviews__body-videos">
                         <div class="reviews__body-video">
                             <div class="reviews__body-preview">
-                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/1.jpg" alt="sea and girl">
-                                <button class="reviews__body-btn reviews__body-btn--play">
+                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/1.jpg" alt="sea and girl" loading="lazy">
+                                <button class="reviews__body-btn reviews__body-btn--play" aria-label="play video">
                                     <svg class="reviews__body-play icon icon--play">
                                         <use xlink:href="img/sprites/sprite.svg#play"></use>
                                     </svg>
@@ -1096,8 +1096,8 @@
                         </div>
                         <div class="reviews__body-video">
                             <div class="reviews__body-preview ">
-                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/2.jpg" alt="sea and girl">
-                                <button class="reviews__body-btn reviews__body-btn--play">
+                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/2.jpg" alt="sea and girl" loading="lazy">
+                                <button class="reviews__body-btn reviews__body-btn--play" aria-label="play video">
                                     <svg class="reviews__body-play icon icon--play">
                                         <use xlink:href="img/sprites/sprite.svg#play"></use>
                                     </svg>
@@ -1106,8 +1106,8 @@
                         </div>
                         <div class="reviews__body-video">
                             <div class="reviews__body-preview ">
-                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/3.jpg" alt="sea and girl">
-                                <button class="reviews__body-btn reviews__body-btn--play">
+                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/3.jpg" alt="sea and girl" loading="lazy">
+                                <button class="reviews__body-btn reviews__body-btn--play" aria-label="play video">
                                     <svg class="reviews__body-play icon icon--play">
                                         <use xlink:href="img/sprites/sprite.svg#play"></use>
                                     </svg>
@@ -1116,8 +1116,8 @@
                         </div>
                         <div class="reviews__body-video">
                             <div class="reviews__body-preview">
-                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/4.jpg" alt="sea and girl">
-                                <button class="reviews__body-btn reviews__body-btn--play">
+                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/4.jpg" alt="sea and girl" loading="lazy">
+                                <button class="reviews__body-btn reviews__body-btn--play" aria-label="play video">
                                     <svg class="reviews__body-play icon icon--play">
                                         <use xlink:href="img/sprites/sprite.svg#play"></use>
                                     </svg>
@@ -1126,8 +1126,8 @@
                         </div>
                         <div class="reviews__body-video">
                             <div class="reviews__body-preview">
-                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/2.jpg" alt="sea and girl">
-                                <button class="reviews__body-btn reviews__body-btn--play">
+                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/2.jpg" alt="sea and girl" loading="lazy">
+                                <button class="reviews__body-btn reviews__body-btn--play" aria-label="play video">
                                     <svg class="reviews__body-play icon icon--play">
                                         <use xlink:href="img/sprites/sprite.svg#play"></use>
                                     </svg>
@@ -1136,8 +1136,8 @@
                         </div>
                         <div class="reviews__body-video">
                             <div class="reviews__body-preview">
-                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/3.jpg" alt="sea and girl">
-                                <button class="reviews__body-btn reviews__body-btn--play">
+                                <img class="reviews__body-img reviews__body-img--big" src="img/reviews/picture-slider/3.jpg" alt="sea and girl" loading="lazy">
+                                <button class="reviews__body-btn reviews__body-btn--play" aria-label="play video">
                                     <svg class="reviews__body-play icon icon--play">
                                         <use xlink:href="img/sprites/sprite.svg#play"></use>
                                     </svg>
@@ -1147,32 +1147,32 @@
                     </div>
 
                     <div class="reviews__body-navigation">
-                        <button class="reviews__body-btn reviews__body-btn--prev">
+                        <button class="reviews__body-btn reviews__body-btn--prev" aria-label="previous slide">
                             <svg class="icon icon--arrow-slider">
                                 <use xlink:href="img/sprites/sprite.svg#arrow-slider__prev"></use>
                             </svg>
                         </button>
                         <div class="reviews__body-pictures">
                             <div class="reviews__body-picture">
-                                <img class="reviews__body-img" src="img/reviews/picture-slider/1.jpg" alt="sea and girl">
+                                <img class="reviews__body-img" src="img/reviews/picture-slider/1.jpg" alt="sea and girl" loading="lazy">
                             </div>
                             <div class="reviews__body-picture">
-                                <img class="reviews__body-img" src="img/reviews/picture-slider/2.jpg" alt="sea and girl">
+                                <img class="reviews__body-img" src="img/reviews/picture-slider/2.jpg" alt="sea and girl" loading="lazy">
                             </div>
                             <div class="reviews__body-picture">
-                                <img class="reviews__body-img" src="img/reviews/picture-slider/3.jpg" alt="sea and girl">
+                                <img class="reviews__body-img" src="img/reviews/picture-slider/3.jpg" alt="sea and girl" loading="lazy">
                             </div>
                             <div class="reviews__body-picture">
-                                <img class="reviews__body-img" src="img/reviews/picture-slider/4.jpg" alt="sea and girl">
+                                <img class="reviews__body-img" src="img/reviews/picture-slider/4.jpg" alt="sea and girl" loading="lazy">
                             </div>
                             <div class="reviews__body-picture">
-                                <img class="reviews__body-img" src="img/reviews/picture-slider/2.jpg" alt="sea and girl">
+                                <img class="reviews__body-img" src="img/reviews/picture-slider/2.jpg" alt="sea and girl" loading="lazy">
                             </div>
                             <div class="reviews__body-picture">
-                                <img class="reviews__body-img" src="img/reviews/picture-slider/3.jpg" alt="sea and girl">
+                                <img class="reviews__body-img" src="img/reviews/picture-slider/3.jpg" alt="sea and girl" loading="lazy">
                             </div>
                         </div>
-                        <button class="reviews__body-btn reviews__body-btn--next">
+                        <button class="reviews__body-btn reviews__body-btn--next" aria-label="next slide">
                             <svg class="icon icon--arrow-slider icon--arrow-next">
                                 <use xlink:href="img/sprites/sprite.svg#arrow-slider__next"></use>
                             </svg>
@@ -1188,25 +1188,25 @@
     <div class="container">
         <div class="app__inner">
             <div class="app__inner-content">
-                <h3 class="app__inner-title title">Download Cordelia Experience App</h3>
+                <h3 class="app__inner-title title">Download Cruisora Experience App</h3>
                 <div class="app__inner-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
                 </div>
                 <div class="app__inner-box">
                     <div class="app__inner-item">
                         <a class="app__inner-link" href="#" target="_blank">
-                            <img class="app__inner-store" src="img/app/google-play__store.png" alt="Google Play Store" >
+                            <img class="app__inner-store" src="img/app/google-play__store.png" alt="Google Play Store" loading="lazy">
                         </a>
                     </div>
                     <div class="app__inner-item">
                         <a class="app__inner-link" href="#" target="_blank">
-                            <img class="app__inner-store" src="img/app/app__store.png" alt="App Store" >
+                            <img class="app__inner-store" src="img/app/app__store.png" alt="App Store" loading="lazy">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="app__inner-picture">
-                <img class="app__inner-img" src="img/app/main-picture.png" alt="App in phone">
+                <img class="app__inner-img" src="img/app/main-picture.webp" alt="App in phone" loading="lazy">
             </div>
         </div>
     </div>
@@ -1223,7 +1223,7 @@
                     <div class="distribution__form-item">
                         <label for="email" class="hidden">Email input field</label>
                         <input class="distribution__form-input" name="email" type="email" id="email" placeholder="Enter Your email address" required>
-                        <button class="distribution__form-btn" type="submit">
+                        <button class="distribution__form-btn" type="submit" aria-label="subscribe to the newsletter">
                             <svg class="icon icon--plane">
                                 <use xlink:href="img/sprites/sprite.svg#plane"></use>
                             </svg>
@@ -1232,7 +1232,7 @@
                 </form>
             </div>
             <div class="distribution__inner-picture">
-                <img class="distribution__inner-img" src="img/distribution.png" alt="cruise liner">
+                <img class="distribution__inner-img" src="img/distribution.png" alt="cruise liner" loading="lazy">
             </div>
         </div>
     </div>
@@ -1241,12 +1241,8 @@
     <div class="container">
         <div class="footer__inner">
             <div class="footer__inner-content">
-                <div class="logo">
-                    <a class="logo__link" href="#">
-                        <svg class="icon icon--logo">
-                            <use xlink:href="img/sprites/sprite.svg#logo--footer"></use>
-                        </svg>
-                    </a>
+                <div class="footer__logo">
+                    <a class="footer__logo-link" href="#">Cruisora</a>
                 </div>
                 <div class="footer__inner-descr">
                     Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
@@ -1354,29 +1350,36 @@
                     <h3 class="footer__inner-title">Contacts us</h3>
                     <ul class="footer__inner-list footer__inner-list--contacts">
                         <li class="footer__inner-unit">
-                            <a class="footer__inner-link" href="#">
-                                <svg class="icon icon--email">
-                                    <use xlink:href="img/sprites/sprite.svg#email"></use>
-                                </svg>
-                                contact@company.com
+                            <a class="footer__inner-link" href="mailto:contact@company.com">
+                                <address class="footer__inner-address">
+                                    <svg class="icon icon--email">
+                                        <use xlink:href="img/sprites/sprite.svg#email"></use>
+                                    </svg>
+                                    contact@company.com
+                                </address>
                             </a>
                         </li>
                         <li class="footer__inner-unit">
-                            <a class="footer__inner-link" href="#">
-                                <svg class="icon icon--phone">
-                                    <use xlink:href="img/sprites/sprite.svg#phone"></use>
-                                </svg>
-                                (xx) xxxx-xxxx
+                            <a class="footer__inner-link" href="tel:+19999999999">
+                                <address class="footer__inner-address" >
+                                    <svg class="icon icon--phone">
+                                        <use xlink:href="img/sprites/sprite.svg#phone"></use>
+                                    </svg>
+                                    +1 (999) 999-9999
+                                </address>
                             </a>
                         </li>
                         <li class="footer__inner-unit">
-                            <a class="footer__inner-link" href="#">
-                                <svg class="icon icon--marker-footer">
-                                    <use xlink:href="img/sprites/sprite.svg#marker--footer"></use>
-                                </svg>
-                                794 Mcallister St San Francisco, <br>
-                                94102
+                            <a class="footer__inner-link" href="https://www.google.com/maps?q=37.77995720661901,-122.42510910827458" target="_blank" rel="noopener noreferrer">
+                                <address class="footer__inner-address">
+                                    <svg class="icon icon--marker-footer">
+                                        <use xlink:href="img/sprites/sprite.svg#marker--footer"></use>
+                                    </svg>
+                                    794 Mcallister St San Francisco, <br>
+                                    94102
+                                </address>
                             </a>
+                            
                         </li>
                     </ul>
                 </div>
@@ -1404,5 +1407,6 @@
 </footer>
         <script src="js/vendor.min.js"></script>
         <script src="js/main.min.js"></script>
+        <script src="js/lazysizes.min.min.js" async=""></script>
     </body>
 </html>
