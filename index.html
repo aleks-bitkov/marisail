@@ -177,78 +177,79 @@
 
 </section>
         <div class="chatbot">
-    <div class="chatbot__wrapper">
-        <div class="chatbot__preview" style="background-image: url('img/chatbot-bg.webp');">
-            <svg class="chatbot__preview-icon icon icon--chat">
-                <use xlink:href="img/sprites/sprite.svg#chat"></use>
-            </svg>
-        </div>
-        <div class="chatbot__window" style="background-image: url('img/chatbot-bg.webp');">
-            <div class="chatbot__head">
-                <div class="chatbot__head-box">
-                    <div class="chatbot__head-icon">
-                        <svg class="icon icon--chatbot">
-                            <use xlink:href="img/sprites/sprite.svg#chatbot"></use>
-                        </svg>
-                    </div>
-                    <div class="chatbot__head-info">
-                        <b class="chatbot__head-name">ChatBot</b>
-                        <div class="chatbot__head-status">
-                            <span class="chatbot__head-circle"></span>
-                            <div class="chatbot__head-text">online</div>
+            <div class="chatbot__wrapper">
+                <div class="chatbot__preview">
+                    <img class="chatbot__preview-bg" src="img/chatbot-bg.webp" alt="background chatbot" loading="lazy">
+                    <svg class="chatbot__preview-icon icon icon--chat">
+                        <use xlink:href="img/sprites/sprite.svg#chat"></use>
+                    </svg>
+                </div>
+                <div class="chatbot__window">
+                    <img class="chatbot__preview-bg" src="img/chatbot-bg.webp" alt="background chatbot" loading="lazy">
+                    <div class="chatbot__head">
+                        <div class="chatbot__head-box">
+                            <div class="chatbot__head-icon">
+                                <svg class="icon icon--chatbot">
+                                    <use xlink:href="img/sprites/sprite.svg#chatbot"></use>
+                                </svg>
+                            </div>
+                            <div class="chatbot__head-info">
+                                <b class="chatbot__head-name">ChatBot</b>
+                                <div class="chatbot__head-status">
+                                    <span class="chatbot__head-circle"></span>
+                                    <div class="chatbot__head-text">online</div>
+                                </div>
+                            </div>
                         </div>
+                        <button class="chatbot__head-btn" type="button" aria-label="close window with chatbot">Close</button>
+                    </div>
+                    <div class="chatbot__body">
+                        <div class="chatbot__body-wrapper">
+            
+                            <div class="chatbot__body-box chatbot__bot">
+                                <div class="chatbot__body-picture">
+                                    <svg class="icon icon--chatbot-body">
+                                        <use xlink:href="img/sprites/sprite.svg#chatbot"></use>
+                                    </svg>
+                                </div>
+                                <div class="chatbot__bot-text">
+                                    Hi, how can i help you?
+                                </div>
+                            </div>
+                
+                            <div class="chatbot__body-box chatbot__human">
+                                <div class="chatbot__human-text">
+                                    How are you?
+                                </div>
+                            </div>
+                
+                            <div class="chatbot__body-box chatbot__bot">
+                                <div class="chatbot__body-picture">
+                                    <svg class="icon icon--chatbot-body">
+                                        <use xlink:href="img/sprites/sprite.svg#chatbot"></use>
+                                    </svg>
+                                </div>
+                                <div class="chatbot__bot-text">
+                                    Fine thanks!
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                    <div class="chatbot__footer">
+                        <form action="#">
+                            <input class="chatbot__footer-input" name="message" required type="text" placeholder="Ask your question...">
+                            <button class="chatbot__footer-btn" type="submit" aria-label="send message to chatbot">
+                                <svg class="icon icon--chatbot-plane">
+                                    <use xlink:href="img/sprites/sprite.svg#chatbot-plane"></use>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
                 </div>
-                <button class="chatbot__head-btn" type="button" aria-label="close window with chatbot">Close</button>
             </div>
-            <div class="chatbot__body">
-                <div class="chatbot__body-wrapper">
-    
-                    <div class="chatbot__body-box chatbot__bot">
-                        <div class="chatbot__body-picture">
-                            <svg class="icon icon--chatbot-body">
-                                <use xlink:href="img/sprites/sprite.svg#chatbot"></use>
-                            </svg>
-                        </div>
-                        <div class="chatbot__bot-text">
-                            Hi, how can i help you?
-                        </div>
-                    </div>
-        
-                    <div class="chatbot__body-box chatbot__human">
-                        <div class="chatbot__human-text">
-                            How are you?
-                        </div>
-                    </div>
-        
-                    <div class="chatbot__body-box chatbot__bot">
-                        <div class="chatbot__body-picture">
-                            <svg class="icon icon--chatbot-body">
-                                <use xlink:href="img/sprites/sprite.svg#chatbot"></use>
-                            </svg>
-                        </div>
-                        <div class="chatbot__bot-text">
-                            Fine thanks!
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-            <div class="chatbot__footer">
-                <form action="#">
-                    <input class="chatbot__footer-input" name="message" required type="text" placeholder="Ask your question...">
-                    <button class="chatbot__footer-btn" type="submit" aria-label="send message to chatbot">
-                        <svg class="icon icon--chatbot-plane">
-                            <use xlink:href="img/sprites/sprite.svg#chatbot-plane"></use>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
     
     <button class="chatbot-btn" type="button" aria-label="open chatbot">
-        <!-- <img class="chatbot-img" src="img/chatbot.gif" alt="bot"> -->
         <video class="chatbot-img" preload="auto" autoplay loop muted>
             <source src="img/chatbot.webm" type="video/webm">
             <source src="img/chatbot.mp4" type="video/mp4">
